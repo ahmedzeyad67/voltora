@@ -1,0 +1,43 @@
+.themes-list {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.theme {
+  background-color: var(--primary-card-bg);
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.system-theme-img {
+  background: url(../../../public/images/system-theme.png);
+}
+
+.light-theme-img {
+  background: url(../../../public/images/light-theme.png);
+}
+
+.dark-theme-img {
+  background: url(../../../public/images/dark-theme.png);
+}
+
+.theme-img {
+  width: 22rem;
+  height: 13rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.theme > :last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+}
+
+.theme-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}

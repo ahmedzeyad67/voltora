@@ -1,0 +1,27 @@
+.today-highlight-content {
+  display: flex;
+  gap: 1.2rem;
+  height: -webkit-fill-available;
+}
+
+.today-highlight-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--primary-card-bg);
+  width: 30%;
+}
+
+.today-highlight-element .label {
+  color: var(--secondary-text);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.today-highlight-element .content {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: end;
+}

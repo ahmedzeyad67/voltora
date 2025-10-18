@@ -1,0 +1,68 @@
+body {
+  background-color: var(--body-bg);
+  /* transition: color, background-color, 1s; */
+}
+
+p {
+  margin: 0;
+  color: var(--primary-text);
+}
+
+path {
+  color: var(--primary-text);
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  color: var(--primary-text) !important;
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.weather-app-container {
+  display: flex;
+  gap: 1.2rem;
+  width: 80%;
+}
+
+.homepage-container {
+  display: flex;
+  gap: 1.2rem;
+  width: -webkit-fill-available;
+}
+
+.homepage-container > :first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 55rem;
+}
+
+.weather-app-element-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--container-bg);
+  border-radius: 1.5rem;
+  padding: 1.8rem;
+  width: -webkit-fill-available;
+}
+
+.weather-app-element-label {
+  color: var(--secondary-text);
+  font-weight: 700;
+}
+
+.highlights-suntimes-container {
+  display: flex;
+  gap: 1.2rem;
+}

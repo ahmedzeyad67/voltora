@@ -1,0 +1,117 @@
+.search-container {
+  position: relative;
+}
+
+.search-bar {
+  background-color: var(--container-bg);
+  color: var(--primary-text);
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  padding: 1rem;
+  font-size: 0.9rem;
+  width: -webkit-fill-available;
+}
+
+.search-bar::placeholder {
+  color: var(--primary-text);
+}
+
+.search-result-container {
+  position: absolute;
+  width: 55%;
+  margin-top: 1rem;
+  padding: 2.1rem;
+  padding-right: 0.8rem;
+  border-radius: 1rem;
+  background-color: var(--container-bg);
+  box-shadow: 0 0 20px var(--shadow-color);
+}
+
+.recent-search-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.no-result-found {
+  font-weight: 500;
+  color: var(--secondary-text);
+}
+
+.searched-list-container {
+  overflow-y: scroll;
+  max-height: 26rem;
+  padding-right: 0.8rem;
+}
+
+.searched-list-container > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.searched-list-container::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.6rem;
+}
+
+.searched-list-container::-webkit-scrollbar-thumb {
+  background-color: var(--primary-text);
+  border-radius: 1rem;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--secondary-card-bg);
+  border: solid 1px var(--accent-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.search-container .city:hover {
+  background-color: var(--hover-color);
+}
+
+.search-container .city:active {
+  background-color: var(--accent-color);
+}
+
+.search-container .city:has(button:active) {
+  background-color: var(--hover-color) !important;
+}
+
+.city-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.city-details div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.city .cityname {
+  font-weight: 500;
+}
+
+.city .country-flag {
+  width: 35px;
+  height: 35px;
+  border-radius: 10rem;
+  background-color: white;
+}
+
+.city .fi {
+  position: unset;
+}
+
+.city .city-location {
+  color: var(--secondary-text);
+  font-weight: 500;
+  font-size: 0.9rem;
+}

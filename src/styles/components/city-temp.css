@@ -1,0 +1,44 @@
+.city-temp-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.city-temp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0.5rem 0;
+}
+
+.city-temp-content .cityname {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  text-transform: capitalize;
+}
+
+.city-temp-content .date,
+.city-temp-content .weather-condition {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-text);
+  margin-top: 0.5rem;
+}
+
+.city-temp-content .temp {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.city-temp-content .temp-unit {
+  font-size: 3.2rem;
+  margin: 0 0.6rem;
+}
+
+.city-temp-container .weather-condition-img {
+  width: 11.5rem;
+}

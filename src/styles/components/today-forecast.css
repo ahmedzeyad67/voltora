@@ -1,0 +1,34 @@
+.today-forecast-content {
+  display: flex;
+  gap: 1.2rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.today-forecast-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 1rem 1.4rem;
+  border-radius: 1.5rem;
+  background-color: var(--primary-card-bg);
+  user-select: none;
+}
+
+.today-forecast-element .time {
+  color: var(--secondary-text);
+  font-weight: 700;
+  width: 4.5rem;
+  text-align: center;
+}
+
+.today-forecast-element .weather-condition-img {
+  width: 3.5rem;
+}
+
+.today-forecast-element .temp {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
