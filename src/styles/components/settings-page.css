@@ -1,12 +1,36 @@
+.settings-page-weather-app-container {
+  justify-content: center;
+}
+
+.settings-page-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-section {
+  margin-bottom: 2rem;
+}
+
+.settings-section:last-child {
+  margin-bottom: 0;
+}
+
 .themes-list {
   display: flex;
   gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .theme {
   background-color: var(--primary-card-bg);
   border-radius: 1.5rem;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .system-theme-img {
@@ -40,4 +64,326 @@
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: capitalize;
+}
+
+.settings-section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  color: var(--primary-text);
+  margin-bottom: 1.2rem;
+}
+
+.settings-card {
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  background-color: var(--primary-card-bg);
+}
+
+.settings-section:not(.time-format) .settings-card {
+  padding: 1.8rem;
+}
+
+.settings-section.time-format .settings-card > div {
+  width: 100%;
+}
+
+.settings-section.time-format .settings-card > div button {
+  flex: 1;
+}
+
+.settings-unit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.settings-unit-row:first-child {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-unit-row > div {
+  width: 60%;
+}
+
+.settings-unit-row button {
+  flex: 1;
+}
+
+.settings-unit-label {
+  width: 20%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  min-width: 120px;
+  letter-spacing: 0.02rem;
+  color: var(--secondary-text);
+}
+
+.settings-toggle-group {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.settings-toggle-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05rem !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 0.8rem !important;
+  color: var(--secondary-text) !important;
+  background-color: transparent !important;
+  transition: all 0.2s ease !important;
+  min-width: fit-content;
+}
+
+.settings-toggle-btn:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--hover-color) 50%,
+    transparent
+  ) !important;
+}
+
+.settings-toggle-btn.Mui-selected {
+  background-color: var(--accent-color) !important;
+  border-color: var(--hover-color) !important;
+  color: var(--primary-text) !important;
+  font-weight: 600 !important;
+}
+
+.settings-page-animation-container {
+  width: 20%;
+  margin-left: 1.2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--container-bg);
+  border-radius: 1.5rem;
+}
+
+.animation-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.animation-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-gradient-bg {
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+    to bottom right,
+    rgba(59, 130, 246, 0.2),
+    rgba(168, 85, 247, 0.2)
+  ); */
+  border-radius: 1.5rem;
+  filter: blur(48px);
+}
+
+.animation-inner {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Icon Container */
+.animation-icon-container {
+  position: relative;
+  width: 128px;
+  height: 128px;
+}
+
+.animation-sun-rotating {
+  position: absolute;
+  inset: 0;
+  animation: spin 20s linear infinite;
+}
+
+.animation-sun-rotating svg {
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 213, 7);
+}
+
+.animation-sun-rotating svg path {
+  color: rgb(255, 213, 7);
+}
+
+.animation-cloud-pulsing {
+  position: absolute;
+  inset: 16px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animation-cloud-pulsing svg {
+  width: 100%;
+  height: 100%;
+  color: rgb(147, 197, 253);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Text Center */
+.animation-text-center {
+  text-align: center;
+}
+
+.animation-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-text);
+}
+
+.animation-subtitle {
+  color: var(--secondary-text);
+  font-size: 0.875rem;
+}
+
+/* Icons Row */
+.animation-icons-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.animation-icon-box {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  animation: bounce 1s infinite;
+}
+
+.animation-icon-box.animation-bounce-1 {
+  background-color: rgba(59, 130, 246, 0.2);
+  animation-delay: 0s;
+}
+
+.animation-icon-box.animation-bounce-1 svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgb(96, 165, 250);
+}
+
+.animation-icon-box.animation-bounce-2 {
+  background-color: rgba(255, 213, 7, 0.502);
+  animation-delay: 0.2s;
+}
+
+.animation-icon-box.animation-bounce-2 svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-text);
+}
+
+.animation-icon-box.animation-bounce-3 {
+  animation-delay: 0.4s;
+  background-color: rgba(103, 109, 134, 0.25);
+}
+
+.animation-icon-box.animation-bounce-3 svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Settings Display */
+.animation-settings-display {
+  margin-top: 2rem;
+  background-color: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+[data-theme="light"] .animation-settings-display {
+  background-color: rgba(241, 245, 249, 0.5);
+}
+
+.animation-settings-label {
+  font-size: 0.75rem;
+  color: var(--secondary-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.animation-settings-values {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.animation-settings-item {
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+}
+
+.animation-settings-value {
+  color: rgb(96, 165, 250);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+[data-theme="light"] {
+  .settings-toggle-btn:hover {
+    background-color: color-mix(
+      in srgb,
+      var(--hover-color) 25%,
+      transparent
+    ) !important;
+  }
+
+  .settings-toggle-btn.Mui-selected {
+    background-color: var(--container-bg) !important;
+    border-color: var(--container-bg) !important;
+  }
 }

@@ -65,7 +65,7 @@
   align-items: center;
   padding: 1rem;
   background-color: var(--secondary-card-bg);
-  border: solid 1px var(--accent-color);
+  border: solid 1px var(--border-color);
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.1s;

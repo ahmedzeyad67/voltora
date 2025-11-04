@@ -19,6 +19,7 @@
   --accent-color: rgba(103, 109, 134, 0.5);
   --hover-color: rgba(103, 109, 134, 0.25);
   --shadow-color: rgba(0, 0, 0, 0.62);
+  --border-color: rgba(128, 128, 128, 0.15);
 }
 
 [data-theme="light"] {
@@ -31,6 +32,7 @@
   --accent-color: rgba(97, 102, 110, 0.5);
   --hover-color: rgba(97, 102, 110, 0.25);
   --shadow-color: rgba(0, 0, 0, 0.38);
+  --border-color: rgba(128, 128, 128, 0.344);
 }
 
 body {
