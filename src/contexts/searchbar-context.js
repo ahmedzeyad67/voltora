@@ -11,7 +11,7 @@ export const SearchbarProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `https://geocoding-api.open-meteo.com/v1/search?name=${searchedCityName}&count=100&language=en`
+          `https://geocoding-api.open-meteo.com/v1/search?name=${searchedCityName}&count=100`
         );
         const seen = new Set();
 

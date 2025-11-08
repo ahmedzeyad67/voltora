@@ -1,12 +1,4 @@
-import {
-  // FormControl,
-  // InputLabel,
-  // MenuItem,
-  // Select,
-  Radio,
-  ToggleButton,
-  ToggleButtonGroup,
-} from "@mui/material";
+import { Radio, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { UseSettingsContext } from "../contexts/settings-context";
 
 export default function Settings() {
@@ -70,25 +62,6 @@ export default function Settings() {
             <ToggleButton value="kn">Knots</ToggleButton>
           </ToggleButtonGroup>
         </div>
-        {/* <div>
-          <FormControl fullWidth>
-            <InputLabel>Language</InputLabel>
-            <Select
-              value={settings.language}
-              label="Language"
-              onChange={(e) => updateSettings("language", e.target.value)}
-            >
-              <MenuItem value="en">English</MenuItem>
-              <MenuItem value="de">German</MenuItem>
-              <MenuItem value="fr">French</MenuItem>
-              <MenuItem value="es">Spanish</MenuItem>
-              <MenuItem value="it">Italian</MenuItem>
-              <MenuItem value="pt">Portuguese</MenuItem>
-              <MenuItem value="ru">Russian</MenuItem>
-              <MenuItem value="tr">Turkish</MenuItem>
-            </Select>
-          </FormControl>
-        </div> */}
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ export const SettingsProvider = ({ children }) => {
       timeFormat: "12H",
       tempUnit: "celsius",
       windSpeedUnit: "kmh",
-      // language: "en",
     }
   );
 

@@ -18,7 +18,7 @@
 }
 
 .dark-theme-img {
-  background: url(../../../public/images/dark-theme.png);
+  background-image: url(../../../public/images/dark-theme.png);
 }
 
 .theme-img {
