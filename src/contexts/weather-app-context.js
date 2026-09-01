@@ -29,7 +29,7 @@ export const WeatherAppInfoProvider = ({ children }) => {
       name: "Cairo",
       lat: "30.0626",
       long: "31.2497",
-    }
+    },
   );
 
   useEffect(() => {
@@ -38,13 +38,13 @@ export const WeatherAppInfoProvider = ({ children }) => {
       try {
         const [res1, res2, res3] = await Promise.all([
           axios.get(
-            `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.long}&daily=sunrise,sunset,weather_code&current=temperature_2m,is_day,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m&timezone=auto&forecast_days=1&temperature_unit=${settings.tempUnit}&wind_speed_unit=${settings.windSpeedUnit}`
+            `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.long}&daily=sunrise,sunset,weather_code&current=temperature_2m,is_day,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m&timezone=auto&forecast_days=1&temperature_unit=${settings.tempUnit}&wind_speed_unit=${settings.windSpeedUnit}`,
           ),
           axios.get(
-            `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.long}&hourly=temperature_2m,weather_code,is_day&timezone=auto&forecast_days=1&temperature_unit=${settings.tempUnit}`
+            `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.long}&hourly=temperature_2m,weather_code,is_day&timezone=auto&forecast_days=1&temperature_unit=${settings.tempUnit}`,
           ),
           axios.get(
-            `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.long}&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&temperature_unit=${settings.tempUnit}`
+            `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.long}&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&temperature_unit=${settings.tempUnit}`,
           ),
         ]);
 
@@ -52,8 +52,6 @@ export const WeatherAppInfoProvider = ({ children }) => {
         const { hourly: hourlyData } = res2.data;
         const { daily: weeklyData } = res3.data;
 
-        // const filterHourlyData = (arr) =>
-        //   arr.filter((_, index) => index % 4 === 0);
         const roundTempArr = (arr) => arr.map((element) => Math.round(element));
 
         setWeatherInfo({

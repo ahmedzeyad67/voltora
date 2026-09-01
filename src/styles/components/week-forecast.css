@@ -1,8 +1,7 @@
 .week-forecast-content {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: -webkit-fill-available;
+  gap: 1.2rem;
+  overflow-x: hidden;
 }
 
 .week-forecast-element {
@@ -12,18 +11,23 @@
   padding: 1.2rem;
   border-radius: 1.5rem;
   background-color: var(--primary-card-bg);
+  user-select: none;
+
+  flex-direction: column;
+  flex: 1;
+  gap: 0.8rem;
 }
 
 .week-forecast-element .day {
   font-weight: 500;
   color: var(--secondary-text);
-  width: 2.7rem;
 }
 
 .week-forecast-element .weather-condition {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 0.8rem;
+  flex-direction: column;
 }
 
 .week-forecast-element .weather-condition-img {
@@ -32,7 +36,7 @@
 
 .week-forecast-element .weather-condition .text {
   font-weight: 700;
-  width: min-content;
+  min-width: 8rem;
   text-align: center;
 }
 

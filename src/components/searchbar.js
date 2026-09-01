@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ClickAwayListener } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import { UseSearchbarContext } from "../contexts/searchbar-context";
 import { UseWeatherAppInfo } from "../contexts/weather-app-context";
 import City from "./city";
@@ -12,7 +13,7 @@ export default function Searchbar() {
 
   const [searchInput, setSeacrhInput] = useState("");
   const [recentSearches, setRecentSearches] = useState(
-    JSON.parse(localStorage.getItem("recentSearches")) || []
+    JSON.parse(localStorage.getItem("recentSearches")) || [],
   );
 
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ export default function Searchbar() {
     setRecentSearches((prevSearches) => {
       let recentSearchesTemp = [...prevSearches];
       const searchedCityIndex = prevSearches.findIndex(
-        (city) => JSON.stringify(city) === JSON.stringify(searchedCity)
+        (city) => JSON.stringify(city) === JSON.stringify(searchedCity),
       );
       if (searchedCityIndex !== -1) {
         recentSearchesTemp.splice(searchedCityIndex, 1);
@@ -47,7 +48,7 @@ export default function Searchbar() {
       if (recentSearchesTemp.length > 5) recentSearchesTemp.pop();
       localStorage.setItem(
         "recentSearches",
-        JSON.stringify(recentSearchesTemp)
+        JSON.stringify(recentSearchesTemp),
       );
       return recentSearchesTemp;
     });
@@ -75,6 +76,7 @@ export default function Searchbar() {
           onChange={handleInputChange}
           onClick={() => setIsOpen(true)}
         />
+        <SearchIcon className="search-icon" />
         {isOpen && (
           <div className="search-result-container">
             {searchInput.length < 1 ? (

@@ -1,16 +1,15 @@
-.sunset-sunrise-container {
-  width: fit-content;
-}
-
 .sunset-sunrise-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   gap: 0.2rem;
   padding: 1rem;
   border-radius: 1.5rem;
   background-color: var(--primary-card-bg);
-  width: 14rem;
+}
+
+.sunset-sunrise-img {
+  width: 4rem;
 }
 
 .event-time {

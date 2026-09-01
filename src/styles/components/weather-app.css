@@ -1,6 +1,5 @@
 body {
   background-color: var(--body-bg);
-  /* transition: color, background-color, 1s; */
 }
 
 p {
@@ -21,30 +20,50 @@ path {
 }
 
 .page-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+@media (max-width: 615px) {
+  .page-container {
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 512px) {
+  .page-container {
+    zoom: 0.67;
+  }
+}
+
+@media (max-width: 384px) {
+  .page-container {
+    zoom: 0.5;
+  }
+}
+
+@media (max-width: 308px) {
+  .page-container {
+    zoom: 0.4;
+  }
 }
 
 .weather-app-container {
   display: flex;
+  flex-direction: column;
   gap: 1.2rem;
-  width: 80%;
 }
 
 .homepage-container {
   display: flex;
+  flex-direction: column;
   gap: 1.2rem;
-  width: -webkit-fill-available;
 }
 
 .homepage-container > :first-child {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  width: 55rem;
+  flex: 1;
 }
 
 .weather-app-element-container {
@@ -57,6 +76,10 @@ path {
   width: -webkit-fill-available;
 }
 
+.week-forecast-container {
+  flex: 1;
+}
+
 .weather-app-element-label {
   color: var(--secondary-text);
   font-weight: 700;
@@ -65,4 +88,10 @@ path {
 .highlights-suntimes-container {
   display: flex;
   gap: 1.2rem;
+}
+
+@media (max-width: 1100px) {
+  .highlights-suntimes-container {
+    flex-direction: column;
+  }
 }

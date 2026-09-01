@@ -1,6 +1,6 @@
-import { UseWeatherAppInfo } from "../contexts/weather-app-context";
 import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
+import { UseWeatherAppInfo } from "../contexts/weather-app-context";
 import { weatherCodeVariables } from "../utils/weather-codes";
 import { UseSettingsContext } from "../contexts/settings-context";
 

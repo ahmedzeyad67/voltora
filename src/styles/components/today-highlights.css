@@ -11,7 +11,7 @@
   padding: 1rem;
   border-radius: 1.5rem;
   background-color: var(--primary-card-bg);
-  width: 30%;
+  flex: 1;
 }
 
 .today-highlight-element .label {

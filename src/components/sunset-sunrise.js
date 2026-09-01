@@ -1,4 +1,3 @@
-import CloudIcon from "@mui/icons-material/Cloud";
 import { UseWeatherAppInfo } from "../contexts/weather-app-context";
 import { UseSettingsContext } from "../contexts/settings-context";
 
@@ -31,9 +30,11 @@ export default function SunsetSunrise() {
       </p>
       <div class="sunset-sunrise-content">
         <p class="event-time">{isDay ? sunset : sunrise}</p>
-        <div class="sunset-sunrise-visualization">
-          <CloudIcon sx={{ width: "3.5rem", height: "auto" }} />
-        </div>
+        <img
+          class="sunset-sunrise-img"
+          src={isDay ? "/images/sunset.svg" : "/images/sunrise.svg"}
+          alt="Sunset/Sunrise"
+        />
         <p class="opposite-event-time">
           {isDay ? `Sunrise: ${sunrise}` : `Sunset: ${sunset}`}
         </p>
