@@ -9,7 +9,11 @@ export default function Settings() {
 
   const themesList = ["system", "light", "dark"].map((theme) => {
     return (
-      <div className="theme" onClick={() => handleThemeChange(theme)}>
+      <div
+        className="theme"
+        onClick={() => handleThemeChange(theme)}
+        key={theme}
+      >
         <div className={`theme-img ${theme}-theme-img`}></div>
         <div>
           <p className="theme-name">{theme}</p>

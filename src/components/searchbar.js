@@ -18,12 +18,16 @@ export default function Searchbar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const searchedCitiesList = searchResults?.map((city) => {
-    return <City city={city} handleCitySelect={handleCitySelect}></City>;
+  const searchedCitiesList = searchResults?.map((city, index) => {
+    return (
+      <City key={index} city={city} handleCitySelect={handleCitySelect}></City>
+    );
   });
 
-  const recentSearchedCitiesList = recentSearches?.map((city) => {
-    return <City city={city} handleCitySelect={handleCitySelect}></City>;
+  const recentSearchedCitiesList = recentSearches?.map((city, index) => {
+    return (
+      <City key={index} city={city} handleCitySelect={handleCitySelect}></City>
+    );
   });
 
   function handleInputChange(event) {
@@ -56,7 +60,6 @@ export default function Searchbar() {
 
   function handleCitySelect(event, city) {
     if (event.target.closest("button")) return;
-    console.log({ city });
     setSelectedCity(city);
     localStorage.setItem("selectedCity", JSON.stringify(city));
     addToRecentSearch(city);

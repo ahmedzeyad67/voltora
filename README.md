@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+Voltora 🌤️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Voltora is a responsive weather application built with React that provides real-time weather information for selected cities, including current conditions, hourly forecasts, weekly forecasts, weather highlights, and sunrise/sunset times.
 
-## Available Scripts
+📸 Screenshots
 
-In the project directory, you can run:
+<!-- Add screenshots of your application here -->
 
-### `npm start`
+✨ Features
+Real-time weather information for selected cities
+Current temperature and weather conditions
+Hourly and weekly forecasts
+Weather highlights including humidity, apparent temperature, and wind speed
+Sunrise and sunset information
+City search and selection
+Save and manage favorite cities using browser local storage
+Celsius/Fahrenheit temperature units
+Multiple wind-speed units
+12-hour and 24-hour time formats
+Light, dark, and system theme support
+Responsive and component-based interface
+🛠️ Tech Stack
+React
+JavaScript
+React Router
+Material UI
+Axios
+CSS
+Open-Meteo API
+Browser Local Storage
+🏗️ Architecture
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application is organized into reusable React components and Context providers.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Weather data is fetched through the Open-Meteo API and managed centrally using React Context. Separate contexts are used for weather data, application settings, search functionality, and saved cities.
 
-### `npm test`
+This structure keeps the UI components focused on presentation while centralizing application state and API-related logic.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🚀 Getting Started
+Prerequisites
+Node.js
+npm
+Installation
 
-### `npm run build`
+Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone https://github.com/ahmedzeyad67/voltora.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd voltora
 
-### `npm run eject`
+Install the dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application will be available at:
 
-## Learn More
+http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🌐 API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Voltora uses the Open-Meteo API
+to retrieve weather and forecast data.
 
-### Code Splitting
+📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was created as a personal development project.

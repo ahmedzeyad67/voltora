@@ -23,7 +23,7 @@ export default function WeekForecast() {
       weatherCodeVariables[weekForecast.weatherCode[index]]?.basePath
     }day.png`;
     return (
-      <div className="week-forecast-element">
+      <div className="week-forecast-element" key={index}>
         <p className="day">{day}</p>
         <div className="weather-condition">
           <img

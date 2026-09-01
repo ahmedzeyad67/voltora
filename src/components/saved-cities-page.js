@@ -12,14 +12,15 @@ export default function SavedCitiesPage() {
 
   function handleCitySelect(event, city) {
     if (event.target.closest("button")) return;
-    console.log({ city });
     setSelectedCity(city);
     localStorage.setItem("selectedCity", JSON.stringify(city));
     navigate("/home");
   }
 
-  const searchedCitiesList = Object.values(savedCities)?.map((city) => {
-    return <City city={city} handleCitySelect={handleCitySelect}></City>;
+  const searchedCitiesList = Object.values(savedCities)?.map((city, index) => {
+    return (
+      <City key={index} city={city} handleCitySelect={handleCitySelect}></City>
+    );
   });
 
   return (

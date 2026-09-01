@@ -33,7 +33,7 @@ export default function TodayForecast() {
     }${hourlyForecast.isDay[index] ? "day" : "night"}.png`;
 
     return (
-      <div className="today-forecast-element">
+      <div className="today-forecast-element" key={index}>
         <p className="time">{formattedTime}</p>
         <img
           className="weather-condition-img"

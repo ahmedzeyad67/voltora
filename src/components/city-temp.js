@@ -30,8 +30,6 @@ export default function CityTemp() {
     weatherCodeVariables[weatherCode]?.basePath
   }${isDay ? "day" : "night"}.png`;
 
-  console.log(weatherInfo);
-
   return (
     <div className="city-temp-container">
       <div className="city-temp-content">

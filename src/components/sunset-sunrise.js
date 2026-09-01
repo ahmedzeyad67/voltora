@@ -24,18 +24,18 @@ export default function SunsetSunrise() {
   const sunrise = formatTime(currentHighlights.sunrise);
 
   return (
-    <div class="sunset-sunrise-container weather-app-element-container">
-      <p class="sunset-sunrise-label weather-app-element-label">
+    <div className="sunset-sunrise-container weather-app-element-container">
+      <p className="sunset-sunrise-label weather-app-element-label">
         {isDay ? "SUNSET" : "SUNRISE"}
       </p>
-      <div class="sunset-sunrise-content">
-        <p class="event-time">{isDay ? sunset : sunrise}</p>
+      <div className="sunset-sunrise-content">
+        <p className="event-time">{isDay ? sunset : sunrise}</p>
         <img
-          class="sunset-sunrise-img"
+          className="sunset-sunrise-img"
           src={isDay ? "/images/sunset.svg" : "/images/sunrise.svg"}
           alt="Sunset/Sunrise"
         />
-        <p class="opposite-event-time">
+        <p className="opposite-event-time">
           {isDay ? `Sunrise: ${sunrise}` : `Sunset: ${sunset}`}
         </p>
       </div>
