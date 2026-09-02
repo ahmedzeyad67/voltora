@@ -68,5 +68,5 @@ http://localhost:3000
 
 ## 🌐 API
 
-Voltora uses the Open-Meteo API
+Voltora uses the [Open-Meteo API](https://open-meteo.com/)
 to retrieve weather and forecast data.
