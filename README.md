@@ -8,6 +8,7 @@ Voltora is a responsive weather application built with React that provides real-
 ![Voltora settings](screenshots/settings.png)
 
 ✨ Features
+
 Real-time weather information for selected cities
 Current temperature and weather conditions
 Hourly and weekly forecasts
@@ -22,6 +23,7 @@ Light, dark, and system theme support
 Responsive and component-based interface
 
 🛠️ Tech Stack
+
 React
 JavaScript
 React Router
@@ -40,6 +42,7 @@ Weather data is fetched through the Open-Meteo API and managed centrally using R
 This structure keeps the UI components focused on presentation while centralizing application state and API-related logic.
 
 🚀 Getting Started
+
 Prerequisites
 Node.js
 npm
